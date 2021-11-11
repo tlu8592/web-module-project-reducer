@@ -1,8 +1,7 @@
 import React, { useReducer } from 'react';
 import reducer from './reducers/index';
 import { initialState } from './reducers/index';
-import { 
-  addOne, 
+import {  
   applyNumber, 
   changeOperation, 
   clearDisplay, 
@@ -17,10 +16,6 @@ import CalcButton from './components/CalcButton';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
-
-  // const handleAddOne = () => {
-  //   dispatch(addOne())
-  // }
 
   const handleApplyNumber = (num) => {
     dispatch(applyNumber(num));
